@@ -1,0 +1,185 @@
+/* Profile Section */
+.profile {
+    position: relative;
+    background-color: var(--profile-theme);
+    padding: var(--spacing-large) var(--spacing-medium);
+    text-align: center;
+    user-select: none;
+    border-radius: 5%;
+    color: #fff;
+  }
+
+  .photo img {
+    width: 100%;
+    border-radius: 45%;
+    margin-bottom: 5%;
+  }
+
+  .photo img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .bio .name {
+    font-size: var(--font-size-large);
+    text-align: center;
+    color: var(--color-gray-light-1);
+    margin: 0;
+    margin-top: var(--spacing-small);
+  }
+
+  .bio .profession {
+    font-size: var(--font-size-medium);
+    text-align: center;
+    color: #fff;
+    padding-top: 1%;
+  }
+
+  .intro-section {
+    padding: 0 1rem;
+    color: #333;
+  }
+
+  .intro-section .title {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5%;
+  }
+
+  .about .paragraph {
+    text-align: justify;
+    font-size: var(--font-size-base);
+  }
+
+  /* Технологический стек */
+  .techStack ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .techStack ul li {
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .techStack ul li i {
+    margin-right: 10px;
+    color: #4682bf;
+  }
+
+  .techStack li:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .intro-section h4 {
+    font-weight: 550;
+    color: #333;
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-small);
+  }
+
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    .profile {
+        padding: var(--spacing-medium) var(--spacing-small);
+        border-radius: 8%;
+    }
+
+    .photo img {
+        width: 80%;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .bio .name {
+        font-size: var(--font-size-medium);
+    }
+
+    .bio .profession {
+        font-size: var(--font-size-small);
+    }
+
+    .intro-section {
+        padding: 0 0.5rem;
+    }
+
+    .intro-section .title {
+        font-size: var(--font-size-small);
+        margin-top: var(--spacing-small);
+    }
+
+    .about .paragraph {
+        font-size: var(--font-size-small);
+    }
+
+    .techStack ul li {
+        font-size: 16px;
+        padding: 12px;
+        margin: 8px 0;
+    }
+
+    .techStack ul li i {
+        margin-right: 8px;
+    }
+
+    .intro-section h4 {
+        margin-top: var(--spacing-medium);
+        margin-bottom: var(--spacing-small);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .profile {
+        padding: var(--spacing-small);
+        border-radius: 10%;
+    }
+
+    .photo img {
+        width: 70%;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .bio .name {
+        font-size: var(--font-size-small);
+    }
+
+    .bio .profession {
+        font-size: var(--font-size-small);
+    }
+
+    .intro-section .title {
+        font-size: var(--font-size-small);
+    }
+
+    .about .paragraph {
+        font-size: 0.75rem;
+    }
+
+    .techStack ul li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .techStack ul li i {
+        margin-right: 5px;
+    }
+
+    .intro-section h4 {
+        font-size: 1rem;
+        margin-top: var(--spacing-small);
+    }
+  }

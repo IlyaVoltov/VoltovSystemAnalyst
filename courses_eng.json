@@ -1,0 +1,59 @@
+[
+    {
+        "category": "Coursera",
+        "courses": [
+            "Master of Applied Data Science",
+            "Google Project Management",
+            "Introduction to Data Analytics"
+        ]
+    },
+    {
+        "category": "Kaggle",
+        "courses": [
+            { "name": "Advanced SQL", "certificate": "certificates/AdvancedSQL.png" },
+            { "name": "Data Visualization", "certificate": "certificates/DV.png" },
+            { "name": "Data Cleaning", "certificate": "certificates/DataCleaning.png" },
+            { "name": "Python", "certificate": "certificates/Python.png" }
+        ]
+    },
+    {
+        "category": "DevOps",
+        "courses": [
+            {
+                "name": "DevOps Engineer, DevOps School, St. Petersburg",
+                "certificate": "certificates/devOPS.png"
+            }
+        ]
+    },
+    {
+        "category": "Stepik",
+        "courses": [
+            { "name": "Introductory Econometrics: a Practical Approach", "certificate": "certificates/econom.pdf" },
+            { "name": "Python Programming", "certificate": "certificates/Python_pr_stepik.png" },
+            { "name": "The basics of SEO search engine optimization. Site Ranking Factors", "certificate": "certificates/SEO.png" },
+            { "name": "Agile. Flexible project management methodologies", "certificate": "certificates/Agile.png" },
+            { "name": "HTML CSS JS", "certificate": "certificates/HTMLCSSJS.png" },
+            { "name": "Data Marathon. SQL and Python for Data Analysts", "certificate": "certificates/DataMar.png" },
+            { "name": "Big Data and Data Science: take it to next level", "certificate": "certificates/BD_and_DS.png" },
+            { "name": "Basics of statistics", "certificate": "certificates/basics_stat.png" },
+            "Python Generation",
+            "Interactive SQL Simulator"
+        ]
+    },
+    {
+        "category": "KARPOV.COURSES",
+        "courses": [
+            "Data Analytics Simulator"
+        ]
+    },
+    {
+        "category": "Sololearn",
+        "courses": [
+            { "name": "Python Developer", "certificate": "certificates/Python_Developer.jpg" },
+            { "name": "Coding for Data", "certificate": "certificates/coding_for_data.jpg" },
+            { "name": "HTML", "certificate": "certificates/HTML.jpg" },
+            { "name": "CSS", "certificate": "certificates/css.jpg" },
+            { "name": "Introduction to Python", "certificate": "certificates/intr_python.jpg" }
+        ]
+    }
+]

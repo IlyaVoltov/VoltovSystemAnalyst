@@ -1,0 +1,137 @@
+/* Общие стили для модальных окон */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный затемнённый фон */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Вертикальная прокрутка */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина для модального окна */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень для модального окна */
+    position: relative; /* Для корректного позиционирования элементов внутри */
+}
+
+/* Стиль для заголовка модального окна */
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-right: 50px; /* Добавляем отступ для кнопки закрытия */
+}
+
+/* Стиль для контента внутри модального окна */
+.modal-body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+    max-height: 600px; /* Ограничиваем высоту содержимого */
+    overflow-y: auto; /* Включаем прокрутку */
+}
+
+/* Стилизация полосы прокрутки */
+.modal-body::-webkit-scrollbar {
+    width: 8px; /* Ширина полосы прокрутки */
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет трека */
+    border-radius: 8px; /* Закругленные края */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет бегунка */
+    border-radius: 8px; /* Закругленные края бегунка */
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет бегунка при наведении */
+}
+
+/* Список внутри модального окна */
+.modal-body ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.modal-body ul li {
+    margin-bottom: 10px;
+}
+
+/* Стиль для кнопки закрытия */
+.mcclose, .mconfclose, .mprojclose {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #366a94;
+}
+
+/* Поле поиска в модальном окне */
+#searchInput {
+    width: 35%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 90%; /* Уменьшаем ширину модального окна на мобильных */
+        padding: 15px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+        padding-right: 50px; /* Оставляем пространство для кнопки закрытия */
+        margin-top: 15%;
+    }
+
+    .modal-body {
+        font-size: 14px;
+    }
+
+    .mcclose, .mconfclose, .mprojclose {
+        padding: 8px 15px;
+        font-size: 12px;
+        right: 10px; /* Помещаем кнопку в правый верхний угол */
+        top: 10px;
+        position: absolute; /* Обеспечиваем правильное позиционирование */
+    }
+}

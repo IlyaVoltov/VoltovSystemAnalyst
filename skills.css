@@ -1,0 +1,48 @@
+.pg-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pg-list li {
+    margin-bottom: 20px;
+}
+
+.pg-list li span {
+    display: block;
+    font-weight: 550;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sb-skeleton {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skillbar {
+    background-color: #4682b4;
+    height: 100%;
+    border-radius: 25px;
+    width: 0; /* Начальная ширина */
+    transition: width 7s;
+}
+
+.pg-list li:hover .skillbar {
+    background-color: #366a94; /* Изменение цвета при наведении */
+    width: var(--pgbar-length);
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .pg-list li span {
+        font-size: 16px;
+    }
+
+    .sb-skeleton {
+        height: 10px;
+    }
+}

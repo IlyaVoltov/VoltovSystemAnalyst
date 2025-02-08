@@ -1,0 +1,351 @@
+:root {
+    --color-gray-light-1: #f8f8f8;
+    --color-gray-light-2: #e9e9e9;
+    --color-gray-light-3: #dedede;
+    --color-gray-dark-1: #545454;
+    --color-gray-dark-2: #737373;
+    --color-gray-dark-3: #9a9a9a;
+    --color-blue-dark-1: #00387f;
+    --color-tiffany: #00a6a6;
+    --profile-theme: #4682bf;
+    --timeline-circle-theme: #14253e;
+
+    --font-family-base: 'PT Sans', sans-serif;
+    --font-size-base: 18px;
+    --font-size-large: 1.8rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 0.8rem;
+
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+
+    --pgbar-length: 100%;
+
+    --MATH-PI: 3.1415px;
+    --percent: 100;
+}
+
+html {
+    font-size: 100%;
+    font-family: var(--font-family-base);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: var(--spacing-large) var(--spacing-medium);
+    min-height: 100vh;
+    background-color: var(--color-gray-light-3);
+    border-radius: 28px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 75%;
+    background-color: transparent;
+    display: flex;
+    border-radius: 28px;
+}
+
+.intro {
+	flex: 0 0 31%;
+	background-color: var(--color-gray-light-1);
+	box-shadow: 5px 0px 15px 0px #b3b3b3;
+    border-radius: 28px;
+    margin: var(--font-size-small);
+}
+
+.intro-section.about, .intro-section.stack {
+    background-color: #f7f7f7; /* Светлый фон */
+    padding: 8%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; /* Центрируем секцию */
+}
+
+/* Общий стиль для секций */
+.detail {
+	flex: 1 0 0;
+    background-color: var(--color-gray-light-1);
+    padding: 3%;
+    box-shadow: 5px 0px 15px 0px var(--color-gray-light-3);
+    border-radius: 28px;
+    margin: var(--font-size-small);
+}
+
+.detail-section.pg {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    max-width: 800px;
+    margin: 1%;
+}
+
+.detail:hover > .detail-section:not(:hover) {
+	opacity: 0.3;
+}
+
+.detail-section {
+	transition: all 0.3s;
+}
+
+.detail-section:not(:last-of-type) {
+	padding-bottom: 1rem;
+}
+
+.detail-title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.detail-section > .detail-content {
+	padding: 1.5rem 2rem 1.5rem calc(1.5rem + 10px);
+	user-select: none;
+}
+
+.title-icon + span {
+	font-size: 1.5rem;
+	transition: all 0.3s;
+}
+
+.title-icon {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	margin-right: 1rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: var(--profile-theme);
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+.title-icon i {
+	color: white;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.detail-section:hover .title-icon {
+	transform: scale(1.5);
+	margin-right: 1.5rem;
+}
+
+.detail-section:hover .title-icon + span {
+	letter-spacing: 1.5px;
+}
+
+/* Стили для временной шкалы */
+.timeline-block {
+	position: relative;
+	padding-left: 30px;
+}
+
+.timeline-block:not(:last-of-type) {
+	margin-bottom: 1rem;
+}
+
+.timeline-block h1 {
+	font-size: 1rem;
+	color: #333;
+	margin: 5px 0;
+	transition: all 0.3s;
+}
+
+.timeline-block p, time {
+	font-size: 0.9rem;
+	margin: 5px 0;
+	color: var(--color-gray-dark-2);
+}
+
+.timeline-block::before {
+	position: absolute;
+	content: '';
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	border: 3px solid var(--timeline-circle-theme);
+	border-radius: 50%;
+	left: -10px;
+	top: -5px;
+}
+
+.timeline-block::after {
+	position: absolute;
+	content: '';
+	width: 3px;
+	height: 100%;
+	background-color: var(--timeline-circle-theme);
+	left: -1px;
+	top: 13px;
+}
+
+.timeline-block:hover h1 {
+	color: var(--color-tiffany);
+}
+
+.timeline-block:hover::before {
+	animation: circle 1.2s infinite;
+}
+
+.hover-container {
+    display: inline-block;
+    position: relative;
+}
+
+/* The style for the pop-up */
+.popup {
+	visibility: hidden;
+	width: auto; /* Установил фиксированную ширину для более аккуратного вида */
+	background-color: #333; /* Минималистичный темный фон */
+	color: #fff; /* Белый текст для контраста */
+	text-align: center;
+	padding: 15px;
+	border-radius: 8px; /* Слегка закругленные углы */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для придания объема */
+
+	/* Pop-up positioning */
+	position: absolute;
+	z-index: 1;
+	bottom: 100%; /* Попап над элементом */
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное появление и анимация */
+}
+
+/* Pop-up display on hover */
+.hover-container:hover .popup {
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-50%) translateY(-5px); /* Легкое движение вверх при появлении */
+}
+
+.popup-header {
+    color: #fff;
+    font-weight: 600; /* Умеренная жирность */
+    margin-bottom: 0.5rem; /* Отступ снизу */
+    font-size: 1rem; /* Сбалансированный размер шрифта */
+}
+
+.popup-content {
+    color: #ddd; /* Текст чуть светлее для дополнительного минимализма */
+    font-weight: 400; /* Обычный вес текста */
+    font-size: 0.875rem; /* Чуть меньше основной строки */
+    line-height: 1.5; /* Увеличенное межстрочное расстояние для удобства чтения */
+}
+
+.title-question {
+	margin-left: 10%; /* Автоматическое выравнивание */
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 3rem;
+	padding: 0.7rem;
+	width: 0.7rem;
+	height: 0.7rem;
+	background-color: var(--profile-theme);
+	border-radius: 50%;
+	transition: all 0.3s;
+	color: white;
+	font-size: 0.68rem;
+  }
+
+  /* Общие стили для мобильных устройств */
+@media (max-width: 768px) {
+    html {
+        font-size: 90%; /* Уменьшаем базовый размер шрифта */
+    }
+
+    body {
+        padding: var(--spacing-small); /* Уменьшаем отступы */
+    }
+
+    .wrapper {
+        flex-direction: column; /* Вертикальная компоновка для мобильных устройств */
+        max-width: 95%; /* Ширина контейнера */
+    }
+
+    .intro, .detail {
+        flex: 1; /* Заполнение всей ширины */
+        box-shadow: none; /* Убираем тени для упрощения */
+        margin: var(--spacing-small) 0; /* Отступы между элементами */
+    }
+
+    .intro-section.about, .intro-section.stack {
+        padding: 5%; /* Уменьшаем внутренние отступы */
+    }
+
+    .detail-section.pg {
+        padding: 15px; /* Уменьшаем отступы */
+    }
+
+    .detail-title {
+        flex-direction: column; /* Вертикальное выравнивание заголовка */
+        align-items: flex-start; /* Выравнивание по началу */
+        margin-bottom: 15px; /* Отступ снизу */
+    }
+
+    .title-icon {
+        margin-bottom: 0.5rem; /* Отступ между иконкой и заголовком */
+    }
+
+    .timeline-block {
+        padding-left: 20px; /* Уменьшаем отступ слева */
+    }
+
+    .timeline-block h1, .timeline-block p, time {
+        font-size: 0.85rem; /* Уменьшаем размер шрифта для заголовков и текста */
+    }
+
+    .popup {
+        width: auto; /* Динамическая ширина для поп-апов */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    .popup-header {
+        font-size: 0.9rem; /* Уменьшаем размер заголовка поп-апа */
+    }
+
+    .popup-content {
+        font-size: 0.75rem; /* Уменьшаем размер текста в поп-апе */
+    }
+
+    .title-question {
+		display: none; /* скрываем на мобильных устройствах */
+
+    }
+}
+
+/* Дополнительные изменения для экрана меньше 480px */
+@media (max-width: 480px) {
+    .detail-title {
+        margin-bottom: 10px; /* Меньший отступ */
+    }
+
+    .title-icon {
+        width: 2rem; /* Уменьшаем размеры иконки */
+        height: 2rem; /* Уменьшаем размеры иконки */
+    }
+
+    .title-icon i {
+        font-size: 0.8rem; /* Уменьшаем размер иконки */
+    }
+
+    .popup {
+        padding: 8px; /* Уменьшаем отступы */
+    }
+
+    .popup-header, .popup-content {
+        font-size: 0.7rem; /* Уменьшаем шрифт в поп-апе */
+    }
+}

@@ -1,0 +1,67 @@
+/* Основные стили для секции контактов */
+.intro-section.contact {
+    background-color: #f7f7f7; /* Светлый фон */
+    padding: var(--spacing-small);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; /* Центрируем секцию */
+}
+
+.title {
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-section {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-medium);
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+.info-section i {
+    font-size: var(--font-size-medium);
+    color: var(--profile-theme);
+    margin-right: 10px;
+}
+
+.info-section a {
+    text-decoration: none;
+    color: #4682b4;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.info-section a:hover {
+    color: #366a94;
+}
+
+.info-section:hover {
+    transform: translateY(-5px); /* Плавное поднятие при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .intro-section.contact {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .info-section {
+        font-size: 16px;
+    }
+
+    .info-section i {
+        font-size: 20px;
+    }
+}
